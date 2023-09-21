@@ -1,8 +1,19 @@
+"use client"
+
+import { useSelector } from "react-redux"
+
 const DisplayUser = () => {
-    return(
+    const userData = useSelector((data) => data.users)
+    console.log("user--", userData)
+    return (
         <div className="user">
             <h2>Display User</h2>
-        </div>       
+            {
+                userData?.map((item,index) =>
+                    <div className="user-item" key={index}>{item.name}</div>
+                )
+            }
+        </div>
     )
 }
 

@@ -5,6 +5,14 @@
   border: 1px solid black;
 }
 
+.user-display{
+  overflow: scroll;
+  height: 200px;
+  padding: 10px;
+  padding-left: 50px;
+  border: 1px solid black;
+}
+
 .input{
   width: 250px;
   height: 35px;
@@ -25,4 +33,6 @@
   border-radius: 3px;
   width: 150px;
   color: white;
+  display: flex;
+  justify-content: space-between;
 }

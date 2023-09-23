@@ -6,20 +6,26 @@ const initialState = {
 }
 
 const Slice = createSlice({
-    name:"add user slice",
+    name: "add user slice",
     initialState,
     reducers: {
         addUser: (state, action) => {
-            console.log("action--",action)
+            console.log("action--", action)
             const data = {
                 id: nanoid(),
                 name: action.payload
             }
             state.users.push(data)
+        },
+        removeUser: (state, action) => {
+            const data = state.users.filter((item) => {
+                return item.id != action.payload
+            })
+            state.users = data
         }
     }
 })
 
-export const { addUser } = Slice.actions
+export const { addUser, removeUser } = Slice.actions
 
 export default Slice.reducer

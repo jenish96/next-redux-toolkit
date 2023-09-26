@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { removeUser } from "../redux/slice"
 
 const Page = () => {
-    const data = useSelector((data) => data.users)
+    const data = useSelector((data) => data.userData.users)
     const dispatch = useDispatch()
     console.log("dtata", data)
     return (
